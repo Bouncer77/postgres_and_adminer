@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+
+  db:
+    build: ./db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+
+  adminer:
+    build: ./adminer
+    restart: always
+    ports:
+      - 80:8080
